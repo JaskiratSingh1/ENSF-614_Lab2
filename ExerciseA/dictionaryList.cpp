@@ -63,6 +63,12 @@ const Datum& DictionaryList::cursor_datum() const
   return cursorM->datumM;
 }
 
+Datum& DictionaryList::cursor_datum()
+{
+  assert(cursor_ok());
+  return cursorM->datumM;
+}
+
 void DictionaryList::insert(const int& keyA, const Mystring& datumA)
 {
   // Add new node at head?                                                                                  
@@ -168,82 +174,96 @@ void DictionaryList::make_empty()
 
 void DictionaryList::find(const Key& keyA)
 {
-    // Set cursor to head
-    cursorM = headM;
-    // Loop until reaching the end
-    while(cursorM != nullptr){
-        // Check if current node's key matches keyA
-        if(cursorM->keyM == keyA) {
+    for (Node *p = headM; p !=0; p = p->nextM)
+    {
+        if(keyA == p->keyM)
+        {
+            cursorM = p;
             return;
         }
-        //Increment node
-        cursorM = cursorM->nextM;
     }
-    //Unable to find key in list, set cursor to null
-    cursorM = nullptr;
+    cursorM = 0;
 }
 
-// Deallocate all nodes, set headM to zero.
+
 void DictionaryList::destroy()
 {
-    // Loop until all nodes are destroyed
-    while(headM != nullptr){
-        //Set cursor to head
-        cursorM = headM;
-        //Set head to next node
-        headM = headM->nextM;
-        //Delete cursor node
-        delete cursorM;
-    }
-    // set cursor and head to null
-    headM = cursorM = nullptr;
+  Node *p = headM;
+  while (p != 0) {
+    Node *next = p->nextM;
+    delete p;
+    p = next;
+  }
+  headM = 0;
+  cursorM = 0;
+  sizeM = 0;
+  
 }
 
-// Establishes *this as a copy of source.  Cursor of *this will
-// point to the twin of whatever the source's cursor points to.
+
 void DictionaryList::copy(const DictionaryList& source)
 {
-    //If making a copy of an empty list
-    if(source.headM == nullptr) {
-        headM = cursorM = nullptr;
-        sizeM = 0;
-        return;
-    }
-    
-    // Copy head first
-    headM = new Node(source.headM->keyM, source.headM->datumM, nullptr);
-    // Set up two Node pointers
-    Node* currentSourceNode = source.headM->nextM;
-    Node* newNode = headM;
-    
-    // Loop until reaching end of source
-    while(currentSourceNode != nullptr) {
-        // Create new node and set to nextM
-        newNode->nextM = new Node(currentSourceNode->keyM, currentSourceNode->datumM, nullptr);
-        // Increment current node
-        currentSourceNode = currentSourceNode->nextM;
-        // Increment previous node
-        newNode = newNode->nextM;
-    }
-    // Copying now complete
-    // Update size
-    sizeM = source.sizeM;
-    
-    // Set cursor to point to the twin of source's cursor
-    if(source.cursorM == nullptr) {
+  if (source.headM == nullptr) { // source list is empty.
+        headM = nullptr;
         cursorM = nullptr;
-    } else {
-        //Reset both cursors
-        cursorM = headM;
-        currentSourceNode = source.headM;
-        //Loop till end of list instead of until value matches to avoid potential infinite loop
-        while(currentSourceNode != nullptr) {
-            if(source.cursorM == currentSourceNode) {
-                //Exit function when cursorM is pointing to the correct node
-                return;
-            }
-            cursorM = cursorM->nextM;
-            currentSourceNode = currentSourceNode->nextM;
-        }
+        sizeM = 0;
+        return; 
     }
+
+    headM = new Node(source.headM->keyM, source.headM->datumM, nullptr); // create the first node in the new list.
+    Node* currSource = source.headM->nextM; // pointer to the next node in the source list.
+    Node* currNode = headM; // pointer to the next node in the new list.
+
+    // copy each node.
+    while (currSource != nullptr) {
+        currNode->nextM = new Node(currSource->keyM, currSource->datumM, nullptr);
+        currNode = currNode->nextM;
+        currSource = currSource->nextM;
+    }
+
+    sizeM = source.sizeM;
+
+    // find the corresponding cursor in the new list.
+    if (source.cursorM != nullptr) {
+        currSource = source.headM;
+        currNode = headM;
+
+        // traverse both lists together to find the cursor position.
+        while (currSource != source.cursorM) {
+            currSource = currSource->nextM;
+            currNode = currNode->nextM;
+        }
+        // set the cursor of this list to the corresponding node.
+        cursorM = currNode;
+    } else 
+        cursorM = nullptr;
+    
 }
+// subscript operator
+const Mystring& DictionaryList::operator[](int index) const
+{
+    if (index < 0 || index >= sizeM)
+    {
+        cerr << "out of bounds\n";
+        exit(1);
+    }
+    Node* current = headM;
+    for (int i = 0; i < index; ++i)
+    {
+        current = current->nextM;
+    }
+    return current->datumM;
+}
+
+// insertion operator
+ostream& operator<<(ostream& os, const DictionaryList& dl)
+{
+    Node* current = dl.headM;
+    while (current != 0)
+    {
+        os << current->keyM << "  " << current->datumM << endl;
+        current = current->nextM;
+    }
+    return os;
+}
+

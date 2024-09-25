@@ -24,6 +24,9 @@ using namespace std;
 typedef int Key; 
 typedef Mystring Datum;
 
+class DictionaryList;
+
+
 // THE NODE TYPE
 //    In this exercise the node type is a class, that has a ctor.
 //    Data members of Node are private, and class DictionaryList
@@ -32,6 +35,8 @@ typedef Mystring Datum;
 
 class Node {
   friend class DictionaryList;
+  friend ostream& operator<<(ostream& os, const DictionaryList& dl); //need this to access private members of Node
+
 private:
   Key keyM;
   Datum datumM;
@@ -39,6 +44,7 @@ private:
 
   // This ctor should be convenient in insert and copy operations.
   Node(const Key& keyA, const Datum& datumA, Node *nextA);
+
 };
 
 class DictionaryList {
@@ -63,6 +69,7 @@ public:
   const Datum& cursor_datum() const;
   // REQUIRES: cursor_ok()
   // PROMISES: Returns datum of key/datum pair to which cursor is attached.
+  Datum& cursor_datum();              // For non-const objects
 
   void insert(const Key& keyA, const Datum& datumA);
   // PROMISES:
@@ -100,6 +107,10 @@ public:
   void make_empty();
   // PROMISES: size() == 0.
 
+  const Mystring& operator[](int index) const;
+
+  friend ostream& operator<<(ostream& os, const DictionaryList& dl);
+
 private:
   int sizeM;
   Node *headM;
@@ -115,3 +126,10 @@ private:
 };
 
 #endif
+
+
+
+
+
+
+
