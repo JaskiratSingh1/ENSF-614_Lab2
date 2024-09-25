@@ -1,8 +1,10 @@
-/* File: mystring_B.h
- *
- *
- */
-// ENSF 614 - Lab 2 - Exercise A
+/*
+* File Name: mystring_B.h
+* Assignment: Lab 2 Exercise A
+* Completed by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;

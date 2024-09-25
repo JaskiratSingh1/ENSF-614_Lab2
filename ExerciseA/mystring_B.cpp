@@ -1,8 +1,10 @@
-/*  mystring_B.cpp
- *
- *
- */
-// ENSF 614 - Lab 2 - Exercise A
+/*
+* File Name: mystring_B.cpp
+* Assignment: Lab 2 Exercise A
+* Completed by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
+
 #include "mystring_B.h"
 #include <string.h>
 #include <iostream>

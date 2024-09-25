@@ -1,5 +1,9 @@
-// dictionaryList.h
-// ENSF 614 - Lab 2 - Exercise A
+/*
+* File Name: dictionaryList.h
+* Assignment: Lab 2 Exercise A
+* Completed by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
 
 #ifndef DICTIONARY_H
 #define DICTIONARY_H

@@ -1,8 +1,9 @@
-// lookuptable.cpp
-
-// ENSF 614 - Lab 2 - Exercise A
- 
-// Completed by:
+/*
+* File Name: dictionaryList.cpp
+* Assignment: Lab 2 Exercise A
+* Completed by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
 
 #include <assert.h>
 #include <iostream>
