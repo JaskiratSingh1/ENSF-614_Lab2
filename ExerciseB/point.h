@@ -1,9 +1,9 @@
-//
-//  point.h
-//  ExerciseB
-//
-//  Created by Jaskirat Singh on 9/24/24.
-//
+/*
+* File Name: point.h
+* Assignment: Lab 2 Exercise B
+* Completed by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
 
 #ifndef point_h
 #define point_h
@@ -15,22 +15,27 @@ private:
     int id;
     static int count;
     static int id_counter;
+    
 public:
     Point(double xValue, double yValue);
     Point(const Point& rhs);
     Point& operator=(const Point& rhs);
     ~Point();
     
-    void setx(double x_value);
-    void sety(double y_value);
-
+    // Getters
     double getx() const;
     double gety() const;
     int getID() const;
+    
+    // Setters
+    void setx(double x_value);
+    void sety(double y_value);
 
+    // display and counter methods
     void display() const;
     static int counter();
     
+    // Distance methods
     double distance(const Point& other) const;
     static double distance(const Point& p1, const Point& p2);
 };

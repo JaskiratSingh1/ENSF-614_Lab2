@@ -1,9 +1,10 @@
-//
-//  graphicsWorld.cpp
-//  ExerciseB
-//
-//  Created by Jaskirat Singh on 9/24/24.
-//
+/*
+* File Name: graphicsWorld.cpp
+* Assignment: Lab 2 Exercise B
+* Created by: Professor Moussavi
+* Edited by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
 
 #include <iostream>
 #include "graphicsWorld.h"

@@ -1,9 +1,9 @@
-//
-//  square.cpp
-//  ExerciseB
-//
-//  Created by Jaskirat Singh on 9/24/24.
-//
+/*
+* File Name: square.cpp
+* Assignment: Lab 2 Exercise B
+* Completed by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
 
 #include <iostream>
 #include "square.h"

@@ -99,16 +99,16 @@
 			isa = PBXGroup;
 			children = (
 				2D7BBE512CA21B420070EAF9 /* main.cpp */,
-				2D7BBE5A2CA3797A0070EAF9 /* shape.h */,
-				2D7BBE5B2CA3798A0070EAF9 /* shape.cpp */,
 				2D7BBE562CA3755E0070EAF9 /* point.cpp */,
-				2D7BBE582CA375710070EAF9 /* point.h */,
+				2D7BBE5B2CA3798A0070EAF9 /* shape.cpp */,
 				2D7BBE5D2CA3A0CE0070EAF9 /* square.cpp */,
+				2D7BBE612CA3CEAA0070EAF9 /* rectangle.cpp */,
+				2D7BBE632CA3D0F50070EAF9 /* graphicsWorld.cpp */,
+				2D7BBE582CA375710070EAF9 /* point.h */,
+				2D7BBE5A2CA3797A0070EAF9 /* shape.h */,
 				2D7BBE5F2CA3A0D90070EAF9 /* square.h */,
 				2D7BBE602CA3CE9A0070EAF9 /* rectangle.h */,
-				2D7BBE612CA3CEAA0070EAF9 /* rectangle.cpp */,
 				2D7BBE652CA3D1000070EAF9 /* graphicsWorld.h */,
-				2D7BBE632CA3D0F50070EAF9 /* graphicsWorld.cpp */,
 			);
 			path = ExerciseB;
 			sourceTree = "<group>";

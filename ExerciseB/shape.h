@@ -1,9 +1,9 @@
-//
-//  shape.h
-//  ExerciseB
-//
-//  Created by Jaskirat Singh on 9/24/24.
-//
+/*
+* File Name: shape.h
+* Assignment: Lab 2 Exercise B
+* Completed by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
 
 #ifndef shape_h
 #define shape_h
@@ -22,14 +22,18 @@ public:
     Shape& operator=(const Shape& other);
     virtual ~Shape();
 
+    // Getters
     const Point& getOrigin() const;
     const char* getName() const;
 
+    // Display coordinates
     virtual void display() const;
 
+    // Distance between two points
     double distance(const Shape& other) const;
     static double distance(const Shape& s1, const Shape& s2);
 
+    // Change shape position
     void move(double dx, double dy);
 };
 

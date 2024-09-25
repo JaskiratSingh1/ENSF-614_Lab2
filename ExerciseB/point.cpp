@@ -1,12 +1,13 @@
-//
-//  point.cpp
-//  ExerciseB
-//
-//  Created by Jaskirat Singh on 9/24/24.
-//
+/*
+* File Name: point.cpp
+* Assignment: Lab 2 Exercise B
+* Completed by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
 
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 #include "point.h"
 
 using namespace std;
@@ -24,9 +25,9 @@ Point::Point(const Point& rhs) : xCoordinate(rhs.xCoordinate), yCoordinate(rhs.y
 
 Point& Point::operator=(const Point& rhs) {
     if (this != &rhs) {
+        // ID already unique
         xCoordinate = rhs.xCoordinate;
         yCoordinate = rhs.yCoordinate;
-        // id remains unique per object
     }
     return *this;
 }
@@ -56,8 +57,9 @@ int Point::getID() const {
 }
 
 void Point::display() const {
-    cout << "X-coordinate: " << xCoordinate << endl;
-    cout << "Y-coordinate: " << yCoordinate << endl;
+    cout << fixed << setprecision(2);
+    cout << "X-coordinate: " << setw(9) << xCoordinate << endl;
+    cout << "Y-coordinate: " << setw(9) << yCoordinate << endl;
 }
 
 int Point::counter() {

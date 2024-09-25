@@ -1,9 +1,9 @@
-//
-//  rectangle.h
-//  ExerciseB
-//
-//  Created by Jaskirat Singh on 9/24/24.
-//
+/*
+* File Name: rectangle.h
+* Assignment: Lab 2 Exercise B
+* Completed by: Jaskirat Singh (Jazz), Frank Ma
+* Submission Date: 25 September 2025
+*/
 
 #ifndef rectangle_h
 #define rectangle_h
@@ -20,12 +20,15 @@ public:
     Rectangle& operator=(const Rectangle& other);
     virtual ~Rectangle();
 
+    // Shape features
     double area() const;
     double perimeter() const;
 
+    // Second side getter and setter
     double get_side_b() const;
     void set_side_b(double side);
 
+    // Display method
     virtual void display() const;
 };
 
