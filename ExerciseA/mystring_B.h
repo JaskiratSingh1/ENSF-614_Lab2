@@ -7,8 +7,8 @@
 #include <string>
 using namespace std;
 
-#ifndef MYSTRING_H
-#define MYSTRING_H
+#ifndef mystring_B_h
+#define mystring_B_h
 
 class Mystring {
 
@@ -16,13 +16,13 @@ public:
   Mystring();
   // PROMISES: Empty string object is created.
 
-  Mystring(int n); 
+  Mystring(int n);
   // PROMISES: Creates an empty string with a total capacity of n.
   //           In other words, dynamically allocates n elements for
-  //           charsM,sets the lengthM to zero, and fills the first 
-  //           element of charsM with '\0'. 
+  //           charsM,sets the lengthM to zero, and fills the first
+  //           element of charsM with '\0'.
 
-  Mystring(const char *s); 
+  Mystring(const char *s);
   // REQUIRES: s points to first char of a built-in string.
   // REQUIRES: Mystring object is created by copying chars from s.
 
@@ -32,7 +32,7 @@ public:
 
   Mystring& operator =(const Mystring& rhs); // assignment operator
   // REQUIRES: rhs is reference to a Mystring as a source
-  // PROMISES: to make this-object (object that this is pointing to, as  a copy 
+  // PROMISES: to make this-object (object that this is pointing to, as  a copy
   //           of rhs.
 
   int length() const;
@@ -55,15 +55,15 @@ public:
 
   Mystring& append(const Mystring& other);
 
-  // PROMISES: extends the size of charsM to allow concatenate other.charsM to 
-  //           to the end of charsM. For example if charsM points to "ABC", and 
+  // PROMISES: extends the size of charsM to allow concatenate other.charsM to
+  //           to the end of charsM. For example if charsM points to "ABC", and
   //          other.charsM points to XYZ, extends charsM to "ABCXYZ".
   //
 
   void set_str(char* s);
   // REQUIRES: s is a valid C++ string of characters (a built-in string)
   // PROMISES:copys s into charsM, if the length of s is less than or equal lengthM.
-  //          Othrewise, extends the size of the charsM to s.lengthM+1, and copies 
+  //          Othrewise, extends the size of the charsM to s.lengthM+1, and copies
   //          s into the charsM.
     
   
@@ -71,6 +71,17 @@ public:
   int isEqual (const Mystring& s)const;
   // REQUIRES: s refers to an object of class Mystring
   // PROMISES: retruns true if charsM equal s.charsM.
+
+    bool operator>=(const Mystring& rhs) const;
+    bool operator<=(const Mystring& rhs) const;
+    bool operator!=(const Mystring& rhs) const;
+    bool operator>(const Mystring& rhs) const;
+    bool operator<(const Mystring& rhs) const;
+    bool operator==(const Mystring& rhs) const;
+    char& operator[](int index);
+    const char& operator[](int index) const;
+    
+    friend std::ostream& operator<<(std::ostream& os, const Mystring& s);
 
 
  private:
