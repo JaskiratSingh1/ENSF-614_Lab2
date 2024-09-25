@@ -72,17 +72,17 @@ Datum& DictionaryList::cursor_datum()
 
 void DictionaryList::insert(const int& keyA, const Mystring& datumA)
 {
-  // Add new node at head?                                                                                  
+  // Add new node at head?
   if (headM == 0 || keyA < headM->keyM) {
     headM = new Node(keyA, datumA, headM);
     sizeM++;
   }
 	
-  // Overwrite datum at head?                                                                               
+  // Overwrite datum at head?
   else if (keyA == headM->keyM)
     headM->datumM = datumA;
 	
-  // Have to search ...                                                                                     
+  // Have to search ...
   else {
       
     //POINT ONE
@@ -200,7 +200,6 @@ void DictionaryList::destroy()
   sizeM = 0;
   
 }
-
 
 void DictionaryList::copy(const DictionaryList& source)
 {

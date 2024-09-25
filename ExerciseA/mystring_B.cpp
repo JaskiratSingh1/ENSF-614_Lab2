@@ -196,12 +196,3 @@ ostream& operator<<(ostream& os, const Mystring& s)
     os << s.charsM;
     return os;
 }
-
-
-
-
-
-
-
-
-
