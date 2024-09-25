@@ -43,8 +43,8 @@ void Rectangle::set_side_b(double side) {
 
 void Rectangle::display() const {
     cout << "Rectangle Name: " << getName() << endl;
-    cout << "X-coordinate: " << getOrigin().getx() << endl;
-    cout << "Y-coordinate: " << getOrigin().gety() << endl;
+    //Print x, y coords
+    origin.display();
     cout << "Side a: " << get_side_a() << endl;
     cout << "Side b: " << side_b << endl;
     cout << "Area: " << area() << endl;

@@ -58,8 +58,7 @@ const char* Shape::getName() const {
 // Display shape name and coordinates
 void Shape::display() const {
     cout << "Shape Name: " << shapeName << endl;
-    cout << "X-coordinate: " << origin.getx() << endl;
-    cout << "Y-coordinate: " << origin.gety() << endl;
+    origin.display();
 }
 
 // Get distance

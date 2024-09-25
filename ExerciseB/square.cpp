@@ -33,8 +33,8 @@ void Square::set_side_a(double side) {
 
 void Square::display() const {
     cout << "Square Name: " << getName() << endl;
-    cout << "X-coordinate: " << getOrigin().getx() << endl;
-    cout << "Y-coordinate: " << getOrigin().gety() << endl;
+    // Print x, y coords
+    origin.display();
     cout << "Side a: " << side_a << endl;
     cout << "Area: " << area() << endl;
     cout << "Perimeter: " << perimeter() << endl;

@@ -12,8 +12,10 @@
 
 class Shape {
 private:
-    Point origin;
     char* shapeName;
+    
+protected:
+    Point origin;
 
 public:
     Shape(double x, double y, const char* name);

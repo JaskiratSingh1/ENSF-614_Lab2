@@ -57,9 +57,10 @@ int Point::getID() const {
 }
 
 void Point::display() const {
+    // Match requested print style
     cout << fixed << setprecision(2);
-    cout << "X-coordinate: " << setw(9) << xCoordinate << endl;
-    cout << "Y-coordinate: " << setw(9) << yCoordinate << endl;
+    cout << "X-coordinate: " << xCoordinate << endl;
+    cout << "Y-coordinate: " << yCoordinate << endl;
 }
 
 int Point::counter() {
