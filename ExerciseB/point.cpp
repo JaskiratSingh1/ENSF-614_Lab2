@@ -35,19 +35,19 @@ Point::~Point() {
     count--;
 }
 
-void Point::setX(double x_value) {
+void Point::setx(double x_value) {
     xCoordinate = x_value;
 }
 
-void Point::setY(double y_value) {
+void Point::sety(double y_value) {
     yCoordinate = y_value;
 }
 
-double Point::getX() const {
+double Point::getx() const {
     return xCoordinate;
 }
 
-double Point::getY() const {
+double Point::gety() const {
     return yCoordinate;
 }
 

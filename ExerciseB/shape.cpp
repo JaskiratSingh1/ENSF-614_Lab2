@@ -50,8 +50,8 @@ const char* Shape::getName() const {
 
 void Shape::display() const {
     cout << "Shape Name: " << shapeName << endl;
-    cout << "X Coordinate: " << origin.getX() << endl;
-    cout << "Y Coordinate: " << origin.getY() << endl;
+    cout << "X Coordinate: " << origin.getx() << endl;
+    cout << "Y Coordinate: " << origin.gety() << endl;
 }
 
 double Shape::distance(const Shape& other) const {
@@ -63,6 +63,6 @@ double Shape::distance(const Shape& s1, const Shape& s2) {
 }
 
 void Shape::move(double dx, double dy) {
-    origin.setX(origin.getX() + dx);
-    origin.setY(origin.getY() + dy);
+    origin.setx(origin.getx() + dx);
+    origin.sety(origin.gety() + dy);
 }

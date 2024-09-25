@@ -21,11 +21,11 @@ public:
     Point& operator=(const Point& rhs);
     ~Point();
     
-    void setX(double x_value);
-    void setY(double y_value);
+    void setx(double x_value);
+    void sety(double y_value);
 
-    double getX() const;
-    double getY() const;
+    double getx() const;
+    double gety() const;
     int getID() const;
 
     void display() const;

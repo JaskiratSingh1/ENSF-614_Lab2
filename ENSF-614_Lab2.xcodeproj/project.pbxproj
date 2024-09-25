@@ -11,6 +11,8 @@
 		2D7BBE572CA3755E0070EAF9 /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BBE562CA3755E0070EAF9 /* point.cpp */; };
 		2D7BBE5C2CA3798A0070EAF9 /* shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BBE5B2CA3798A0070EAF9 /* shape.cpp */; };
 		2D7BBE5E2CA3A0CE0070EAF9 /* square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BBE5D2CA3A0CE0070EAF9 /* square.cpp */; };
+		2D7BBE622CA3CEAA0070EAF9 /* rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BBE612CA3CEAA0070EAF9 /* rectangle.cpp */; };
+		2D7BBE642CA3D0F50070EAF9 /* graphicsWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BBE632CA3D0F50070EAF9 /* graphicsWorld.cpp */; };
 		2DB1EF352C9C808300B0957D /* mystring_B.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1EF342C9C808300B0957D /* mystring_B.cpp */; };
 		2DB1EF362C9C808300B0957D /* dictionaryList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1EF312C9C808300B0957D /* dictionaryList.cpp */; };
 		2DB1EF372C9C808300B0957D /* exBmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1EF322C9C808300B0957D /* exBmain.cpp */; };
@@ -55,6 +57,10 @@
 		2D7BBE5B2CA3798A0070EAF9 /* shape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shape.cpp; sourceTree = "<group>"; };
 		2D7BBE5D2CA3A0CE0070EAF9 /* square.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = square.cpp; sourceTree = "<group>"; };
 		2D7BBE5F2CA3A0D90070EAF9 /* square.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = square.h; sourceTree = "<group>"; };
+		2D7BBE602CA3CE9A0070EAF9 /* rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rectangle.h; sourceTree = "<group>"; };
+		2D7BBE612CA3CEAA0070EAF9 /* rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rectangle.cpp; sourceTree = "<group>"; };
+		2D7BBE632CA3D0F50070EAF9 /* graphicsWorld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = graphicsWorld.cpp; sourceTree = "<group>"; };
+		2D7BBE652CA3D1000070EAF9 /* graphicsWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = graphicsWorld.h; sourceTree = "<group>"; };
 		2DB1EF1B2C9C802500B0957D /* ENSF-614_Lab2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ENSF-614_Lab2"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB1EF292C9C805100B0957D /* ExerciseA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExerciseA; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB1EF302C9C808300B0957D /* dictionaryList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dictionaryList.h; sourceTree = "<group>"; };
@@ -99,6 +105,10 @@
 				2D7BBE582CA375710070EAF9 /* point.h */,
 				2D7BBE5D2CA3A0CE0070EAF9 /* square.cpp */,
 				2D7BBE5F2CA3A0D90070EAF9 /* square.h */,
+				2D7BBE602CA3CE9A0070EAF9 /* rectangle.h */,
+				2D7BBE612CA3CEAA0070EAF9 /* rectangle.cpp */,
+				2D7BBE652CA3D1000070EAF9 /* graphicsWorld.h */,
+				2D7BBE632CA3D0F50070EAF9 /* graphicsWorld.cpp */,
 			);
 			path = ExerciseB;
 			sourceTree = "<group>";
@@ -234,9 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D7BBE5E2CA3A0CE0070EAF9 /* square.cpp in Sources */,
+				2D7BBE642CA3D0F50070EAF9 /* graphicsWorld.cpp in Sources */,
 				2D7BBE572CA3755E0070EAF9 /* point.cpp in Sources */,
 				2D7BBE5C2CA3798A0070EAF9 /* shape.cpp in Sources */,
 				2D7BBE522CA21B420070EAF9 /* main.cpp in Sources */,
+				2D7BBE622CA3CEAA0070EAF9 /* rectangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

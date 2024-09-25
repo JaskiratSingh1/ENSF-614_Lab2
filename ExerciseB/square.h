@@ -8,6 +8,8 @@
 #ifndef square_h
 #define square_h
 
+#include "shape.h"
+
 class Square : public Shape {
 private:
     double side_a;
@@ -19,8 +21,8 @@ public:
     double area() const;
     double perimeter() const;
 
-    double getSideA() const;
-    void setSideA(double side);
+    double get_side_a() const;
+    void set_side_a(double side);
 
     virtual void display() const;
 };
